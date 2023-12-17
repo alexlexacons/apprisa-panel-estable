@@ -10,11 +10,11 @@
                 <h1>Administrador de cuentas</h1>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Status</a>
+                        <a href="#">Panel</a>
                     </li>
                     <li><i class='bx bx-chevron-right' ></i></li>
                     <li>
-                        <a class="active" href="#">Delimitacion de zonas</a>
+                        <a class="active" href="#">Administrador de cuentas</a>
                     </li>
                 </ul>
             </div>

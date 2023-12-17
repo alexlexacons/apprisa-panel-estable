@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -349,6 +350,7 @@ body {
   display: flex;
   align-items: center;
   grid-gap: 16px;
+  background-color: transparent !important;
 }
 
 #content main .head-title .left .breadcrumb li {
@@ -611,4 +613,94 @@ body {
   #content main .table-data .todo .todo-list {
     min-width: 420px;
   }
+}
+/*Estilos del modal del perfil*/
+#configuracionCuentaModal .modal-header {
+  background-color: #ffbd22;
+  /* Color de fondo azul */
+  color: white;
+  /* Texto en blanco */
+}
+
+#configuracionCuentaModal .close {
+  color: white;
+  /* Color del ícono de cierre */
+}
+
+#configuracionCuentaModal .modal-body {
+  background-color: #f8f9fc;
+  /* Color de fondo claro */
+  color: #5a5c69;
+  /* Color del texto oscuro */
+}
+
+#configuracionCuentaModal .modal-footer #Cerrar {
+  background-color: #ff3131;
+  /* Color de fondo */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  /* Color del texto */
+}
+
+#configuracionCuentaModal .modal-footer #Cerrar:hover {
+  background-color: #d91515;
+}
+
+#configuracionCuentaModal .modal-footer #Guardar {
+  background-color: #21ff42;
+  /* Color de fondo */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  /* Color del texto */
+}
+
+#configuracionCuentaModal .modal-footer #Guardar:hover {
+  background-color: #05e327;
+}
+
+#configuracionCuentaModal .modal-dialog {
+  max-width: 600px;
+  /* Cambiar según la necesidad */
+}
+
+/*Estilos del modal de norificaciones*/
+#notificacionesModal .modal-header {
+  background-color: #ffbd22;
+  color: white;
+}
+
+#notificacionesModal .close {
+  color: white;
+}
+
+#notificacionesModal .modal-body {
+  background-color: #f8f9fa;
+  color: #5a5c69;
+}
+
+#notificacionesModal .list-group-item {
+  background-color: #fff; /* Fondo de cada elemento de la lista */
+  border: 1px solid #ddd; /* Borde de cada elemento */
+}
+
+#notificacionesModal .modal-dialog {
+  max-width: 400px; /* Cambia el ancho según sea necesario */
+}
+
+#notificacionesModal .modal-footer {
+  background-color: #f8f9fa;
+  color: #5a5c69;
+}
+
+#notificacionesModal .modal-footer .btn-secondary {
+  background-color: #ff3131; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border-radius: 20px;
+  border: none;
+}
+
+#notificacionesModal .modal-footer .btn-secondary:hover {
+  background-color: #d91515; /* Color de fondo al pasar el ratón */
 }/*# sourceMappingURL=styles.css.map */

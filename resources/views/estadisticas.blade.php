@@ -11,7 +11,7 @@
                 <h1>Estadisticas</h1>
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">Status</a>
+                        <a href="#">Panel</a>
                     </li>
                     <li><i class='bx bx-chevron-right' ></i></li>
                     <li>
