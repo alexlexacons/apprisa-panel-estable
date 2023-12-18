@@ -1,7 +1,8 @@
 
 @extends('layouts.master')
 @section('estadisticas')
-
+@include('layouts.head')
+@include('layouts.sidebar')
 <section id="content">
     @include('layouts.nav')
 

@@ -978,3 +978,134 @@ body {
 	color: #495057;
 	/* Color del texto del cuerpo */
 }
+
+/*-----------------------------*/
+/*Estilos de la pagina de login*/
+/*-----------------------------*/
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/*Login Alba*/
+.login-form-alba {
+    background: rgba(255, 255, 255, 0.164);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 350px;
+    border: 1px solid rgb(218, 218, 218);
+    .logo-login{
+        width: 180px;
+        margin: 20px;
+    }
+}
+
+.login-form-alba h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-form-alba input {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.307);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1; /* Opcional: para navegadores que reducen la opacidad de los placeholders */
+}
+
+.login-form-alba .btn {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #ffe100;
+    color: #000000;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/*Login Apprisa*/
+.login-form-apprisa {
+    background: rgba(255, 255, 255, 0.164);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 350px;
+    border: 1px solid rgb(218, 218, 218);
+    .logo-login-apprisa{
+        width: 80px;
+        margin: 20px;
+    }
+}
+
+.login-form-apprisa h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-form-apprisa input {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.307);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.login-form-apprisa .btnapprisa {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #ffe100;
+    color: #000000;
+    font-weight: bolder;
+    cursor: pointer;
+}

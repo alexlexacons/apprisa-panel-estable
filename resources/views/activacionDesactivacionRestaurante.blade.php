@@ -1,7 +1,8 @@
 
 @extends('layouts.master')
 @section('activacionDesactivacionRestaurante')
-
+@include('layouts.head')
+@include('layouts.sidebar')
 <!-- Modal de Confirmación de Rechazo -->
 <div class="modal fade" id="confirmacionRechazoModal" tabindex="-1" role="dialog" aria-labelledby="confirmacionRechazoModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -22,7 +23,7 @@
       </div>
     </div>
   </div>
-  
+
 
 <!-- Modal de Confirmación de Aprobación -->
 <div class="modal fade" id="confirmacionAprobacionModal" tabindex="-1" role="dialog" aria-labelledby="confirmacionAprobacionModalLabel" aria-hidden="true">
@@ -44,7 +45,7 @@
       </div>
     </div>
   </div>
-  
+
 
 <!-- Modal de Detalles -->
 <div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="detallesModalLabel" aria-hidden="true">
@@ -78,8 +79,8 @@
       </div>
     </div>
   </div>
-  
-  
+
+
 
 <section id="content">
     @include('layouts.nav')
