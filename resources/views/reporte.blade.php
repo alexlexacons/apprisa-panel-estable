@@ -1,6 +1,86 @@
 
 @extends('layouts.master')
 @section('reporte')
+@include('layouts.head')
+@include('layouts.sidebar')
+<!-- Modal de Confirmación de Rechazo -->
+<div class="modal fade" id="confirmacionRechazoModal" tabindex="-1" role="dialog" aria-labelledby="confirmacionRechazoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmacionRechazoModalLabel">Confirmar Desactivacion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que quieres desactivar este cliente?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Desactivar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal de Confirmación de Aprobación -->
+<div class="modal fade" id="confirmacionAprobacionModal" tabindex="-1" role="dialog" aria-labelledby="confirmacionAprobacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmacionAprobacionModalLabel">Confirmar Activacion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que quieres activar este cliente?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Activar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal de Detalles -->
+<div class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="detallesModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detallesModalLabel">Detalles del cliente</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Ejemplos de información detallada -->
+          <div class="form-group">
+            <label for="detalle1">Detalle 1:</label>
+            <input type="text" class="form-control" id="detalle1" value="Información del Detalle 1">
+          </div>
+          <div class="form-group">
+            <label for="detalle2">Detalle 2:</label>
+            <input type="text" class="form-control" id="detalle2" value="Información del Detalle 2">
+          </div>
+          <div class="form-group">
+            <label for="detalle3">Detalle 3:</label>
+            <textarea class="form-control" id="detalle3">Información adicional del Detalle 3</textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 <section id="content">
     @include('layouts.nav')
@@ -8,14 +88,14 @@
     <main>
         <div class="head-title">
             <div class="left">
-                <h1>Reporte de ventas</h1>
+                <h1>Activar cuentas de clientes</h1>
                 <ul class="breadcrumb">
                     <li>
                         <a href="#">Panel</a>
                     </li>
                     <li><i class='bx bx-chevron-right' ></i></li>
                     <li>
-                        <a class="active" href="#">Reporte de ventas</a>
+                        <a class="active" href="#">Activar una cuenta de cliente</a>
                     </li>
                 </ul>
             </div>
@@ -24,31 +104,6 @@
                 <span class="text">Descargar PDF</span>
             </a>
         </div>
-
-        <ul class="box-info">
-            <li>
-                <i class='bx bxs-calendar-check' ></i>
-                <span class="text">
-                    <h3>---</h3>
-                    <p>Opcion</p>
-                </span>
-            </li>
-            <li>
-                <i class='bx bxs-group' ></i>
-                <span class="text">
-                    <h3>---</h3>
-                    <p>Opcion</p>
-                </span>
-            </li>
-            <li>
-                <i class='bx bxs-dollar-circle' ></i>
-                <span class="text">
-                    <h3>---</h3>
-                    <p>Opcion</p>
-                </span>
-            </li>
-        </ul>
-
         <div class="table-data">
             <div class="order">
                 <div class="head">
@@ -58,84 +113,30 @@
                 </div>
                 <table>
                     <thead>
-                    <tr>
-                        <th>Columna</th>
-                        <th>Columna</th>
-                        <th>Columna</th>
-                    </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                            <th>Localizacion</th>
+                            <th>Documentacion</th>
+                            <th>Acciones</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            <img src="{{ asset('img/people.png') }}">
-                            <p>John Doe</p>
-                        </td>
-                        <td>01-10-2021</td>
-                        <td><span class="status completed">Completed</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="{{ asset('img/people.png') }}">
-                            <p>John Doe</p>
-                        </td>
-                        <td>01-10-2021</td>
-                        <td><span class="status pending">Pending</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="{{ asset('img/people.png') }}">
-                            <p>John Doe</p>
-                        </td>
-                        <td>01-10-2021</td>
-                        <td><span class="status process">Process</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="{{ asset('img/people.png') }}">
-                            <p>John Doe</p>
-                        </td>
-                        <td>01-10-2021</td>
-                        <td><span class="status pending">Pending</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="{{ asset('img/people.png') }}">
-                            <p>John Doe</p>
-                        </td>
-                        <td>01-10-2021</td>
-                        <td><span class="status completed">Completed</span></td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <p>Ejemplo</p>
+                            </td>
+                            <td>01-10-2021</td>
+                            <td>Ejemplo de localizacion</td>
+                            <td>Documentacion</td>
+                            <td>
+                                <a href="#" class="status completed" data-toggle="modal" data-target="#confirmacionAprobacionModal">Activar</a>
+                                <a href="#" class="status process" data-toggle="modal" data-target="#detallesModal">Ver detalles</a>
+                                <a href="#" class="status pending" data-toggle="modal" data-target="#confirmacionRechazoModal">Desactivar</a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="todo">
-                <div class="head">
-                    <h3>Todos</h3>
-                    <i class='bx bx-plus' ></i>
-                    <i class='bx bx-filter' ></i>
-                </div>
-                <ul class="todo-list">
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="not-completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                    <li class="not-completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded' ></i>
-                    </li>
-                </ul>
             </div>
         </div>
     </main>

@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ApprisaController::class,"index"])->name("index");
 
+Route::get('/status', [ApprisaController::class,"status"])->name("status");
+
 Route::get('/estadisticas', [ApprisaController::class,"estadistics"])->name("estadisticas");
 
 Route::get('/reporte', [ApprisaController::class,"reporte"])->name("reporte");
@@ -38,3 +40,4 @@ Route::get('/activacionDesactivacionRepartidor', [ApprisaController::class,"acti
 
 Route::get('/activacionDesactivacionCliente', [ApprisaController::class,"activacionDesactivacionCliente"])->name("activacionDesactivacionCliente");
 
+Route::get('/login', [ApprisaController::class,"login"])->name("login");

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('admin')
-
+@include('layouts.head')
+@include('layouts.sidebar')
 <section id="content">
     @include('layouts.nav')
 

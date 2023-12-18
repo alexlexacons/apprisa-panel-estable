@@ -11,6 +11,11 @@ class ApprisaController extends Controller
         return view ("welcome", compact("page"));
     }
 
+    public function status (){
+        $page = "pageStatus";
+        return view ("status", compact("page"));
+    }
+
     public function estadistics (){
         $page = "pageEstadistics";
         return view ("estadisticas", compact("page"));
@@ -64,5 +69,10 @@ class ApprisaController extends Controller
     public function activacionDesactivacionCliente(){
         $page = "pageactivacionDesactivacionCliente";
         return view ("activacionDesactivacionCliente", compact("page"));
+    }
+
+    public function login(){
+        $page = "pagelogin";
+        return view ("login", compact("page"));
     }
 }

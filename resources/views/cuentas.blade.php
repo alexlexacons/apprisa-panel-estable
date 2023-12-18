@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('cuentas')
+@include('layouts.head')
+@include('layouts.sidebar')
 <section id="content">
    @include('layouts.nav')
    <main>
