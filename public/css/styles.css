@@ -431,6 +431,105 @@ body {
   color: var(--dark);
 }
 
+/*Contenedor de cards de la seccion de cuentas*/
+/*Autorizacion de cuentas*/
+.container-opciones-autorizar-cuentas h2 {
+  margin-top: 20px;
+  color: var(--dark);
+}
+.container-opciones-autorizar-cuentas #content main .box-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 24px;
+  margin-top: 36px;
+}
+.container-opciones-autorizar-cuentas #content main .box-info li {
+  padding: 24px;
+  background: var(--light);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+}
+.container-opciones-autorizar-cuentas #content main .box-info li .bx {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-opciones-autorizar-cuentas #content main .box-info li:nth-child(1) .bx {
+  background: var(--light-blue);
+  color: var(--blue);
+}
+.container-opciones-autorizar-cuentas #content main .box-info li:nth-child(2) .bx {
+  background: var(--light-yellow);
+  color: var(--yellow);
+}
+.container-opciones-autorizar-cuentas #content main .box-info li:nth-child(3) .bx {
+  background: var(--light-orange);
+  color: var(--orange);
+}
+.container-opciones-autorizar-cuentas #content main .box-info li .text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+}
+.container-opciones-autorizar-cuentas #content main .box-info li .text p {
+  color: var(--dark);
+}
+
+/*Activacion y desactivacion de cuentas*/
+.container-opciones-activacion-cuentas h2 {
+  margin-top: 20px;
+  color: var(--dark);
+}
+.container-opciones-activacion-cuentas #content main .box-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 24px;
+  margin-top: 36px;
+}
+.container-opciones-activacion-cuentas #content main .box-info li {
+  padding: 24px;
+  background: var(--light);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+}
+.container-opciones-activacion-cuentas #content main .box-info li .bx {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-opciones-activacion-cuentas #content main .box-info li:nth-child(1) .bx {
+  background: var(--light-blue);
+  color: var(--blue);
+}
+.container-opciones-activacion-cuentas #content main .box-info li:nth-child(2) .bx {
+  background: var(--light-yellow);
+  color: var(--yellow);
+}
+.container-opciones-activacion-cuentas #content main .box-info li:nth-child(3) .bx {
+  background: var(--light-orange);
+  color: var(--orange);
+}
+.container-opciones-activacion-cuentas #content main .box-info li .text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+}
+.container-opciones-activacion-cuentas #content main .box-info li .text p {
+  color: var(--dark);
+}
+
 #content main .table-data {
   display: flex;
   flex-wrap: wrap;
@@ -681,12 +780,15 @@ body {
 }
 
 #notificacionesModal .list-group-item {
-  background-color: #fff; /* Fondo de cada elemento de la lista */
-  border: 1px solid #ddd; /* Borde de cada elemento */
+  background-color: #fff;
+  /* Fondo de cada elemento de la lista */
+  border: 1px solid #ddd;
+  /* Borde de cada elemento */
 }
 
 #notificacionesModal .modal-dialog {
-  max-width: 400px; /* Cambia el ancho según sea necesario */
+  max-width: 400px;
+  /* Cambia el ancho según sea necesario */
 }
 
 #notificacionesModal .modal-footer {
@@ -695,12 +797,117 @@ body {
 }
 
 #notificacionesModal .modal-footer .btn-secondary {
-  background-color: #ff3131; /* Color de fondo del botón */
-  color: white; /* Color del texto del botón */
+  background-color: #ff3131;
+  /* Color de fondo del botón */
+  color: white;
+  /* Color del texto del botón */
   border-radius: 20px;
   border: none;
 }
 
 #notificacionesModal .modal-footer .btn-secondary:hover {
-  background-color: #d91515; /* Color de fondo al pasar el ratón */
+  background-color: #d91515;
+  /* Color de fondo al pasar el ratón */
+}
+
+/*Estilos del modal de detalles de la tabla de autorizacion de cuentas*/
+#detallesModal .modal-header {
+  background-color: #FFCE26;
+  /* Color de fondo, por ejemplo, azul */
+  color: white;
+  /* Color del texto, por ejemplo, blanco */
+}
+
+#detallesModal .close {
+  color: white;
+}
+
+#detallesModal .modal-body {
+  background-color: #f8f9fa;
+  /* Color de fondo claro */
+  color: #5a5c69;
+  /* Color del texto oscuro */
+}
+
+#detallesModal .form-control {
+  border: 1px solid #ced4da;
+  /* Color del borde */
+  padding: 0.375rem 0.75rem;
+  /* Espaciado interno */
+}
+
+#detallesModal .modal-dialog {
+  max-width: 500px;
+  /* Cambia el ancho según sea necesario */
+}
+
+#detallesModal .modal-footer .btn-primary {
+  background-color: #04db00;
+  /* Color de fondo para el botón Aceptar */
+  border-radius: 20px;
+  border: none;
+  /* Color del borde para el botón Aceptar */
+}
+
+#detallesModal .modal-footer .btn-secondary {
+  background-color: #6c757d;
+  /* Color de fondo para el botón Cerrar */
+  border-color: #6c757d;
+  /* Color del borde para el botón Cerrar */
+  border-radius: 20px;
+  border: none;
+}
+
+/*Estilos para aprobar a un restaurante*/
+/* Modal de Confirmación de Aprobación */
+#confirmacionAprobacionModal .modal-header {
+  background-color: #28a745;
+  /* Verde para aprobación */
+  color: white;
+}
+
+#confirmacionAprobacionModal .modal-footer .btn-secondary {
+  background-color: #6c757d;
+  /* Gris para cancelar */
+  border-radius: 20px;
+  border: none;
+}
+
+#confirmacionAprobacionModal .modal-footer .btn-primary {
+  background-color: #28a745;
+  /* Verde para confirmar aprobación */
+  border-radius: 20px;
+  border: none;
+}
+
+#confirmacionAprobacionModal .modal-body {
+  color: #495057;
+  /* Color del texto del cuerpo */
+}
+
+/*Estilos para el boton de rechazar a un resturante*/
+/* Modal de Confirmación de Rechazo */
+#confirmacionRechazoModal .modal-header {
+  background-color: #dc3545;
+  /* Rojo para rechazo */
+  color: white;
+}
+
+#confirmacionRechazoModal .modal-footer .btn-secondary {
+  background-color: #6c757d;
+  /* Gris para cancelar */
+  border-radius: 20px;
+  border: none;
+}
+
+#confirmacionRechazoModal .modal-footer .btn-danger {
+  background-color: #dc3545;
+  /* Rojo para confirmar rechazo */
+  border-radius: 20px;
+  border: none;
+}
+
+#confirmacionRechazoModal .modal-body {
+  color: #495057;
+  /* Color del texto del cuerpo */
 }/*# sourceMappingURL=styles.css.map */

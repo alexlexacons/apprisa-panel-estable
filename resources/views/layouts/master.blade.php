@@ -76,6 +76,24 @@
             @case('pageAdmin')
                 @yield('admin')
             @break
+            @case('pageAutorizarCuentas')
+                @yield('AutorizarCuentasRestaurante')
+            @break
+            @case('pageAutorizarCuentasRepartidor')
+                @yield('AutorizarCuentasRepartidor')
+            @break
+            @case('pageActivarCuentas')
+                @yield('ActivarCuentas')
+            @break
+            @case('pageactivacionDesactivacionRestaurante')
+                @yield('activacionDesactivacionRestaurante')
+            @break
+            @case('pageactivacionDesactivacionRepartidor')
+                @yield('activacionDesactivacionRepartidor')
+            @break
+            @case('pageactivacionDesactivacionCliente')
+                @yield('activacionDesactivacionCliente')
+            @break
         @endswitch
     @endisset
     <script src="{{ asset('js/script.js') }}"></script>

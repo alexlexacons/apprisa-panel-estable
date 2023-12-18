@@ -36,4 +36,33 @@ class ApprisaController extends Controller
         return view ("admin", compact("page"));
     }
 
+    public function AutorizarCuentasRestaurante(){
+        $page = "pageAutorizarCuentas";
+        return view ("AutorizarCuentasRestaurante", compact("page"));
+    }
+
+    public function AutorizarCuentasRepartidor(){
+        $page = "pageAutorizarCuentasRepartidor";
+        return view ("AutorizarCuentasRepartidor", compact("page"));
+    }
+
+    public function ActivarCuentas(){
+        $page = "pageActivarCuentas";
+        return view ("ActivarCuentas", compact("page"));
+    }
+
+    public function activacionDesactivacionRestaurante(){
+        $page = "pageactivacionDesactivacionRestaurante";
+        return view ("activacionDesactivacionRestaurante", compact("page"));
+    }
+
+    public function activacionDesactivacionRepartidor(){
+        $page = "pageactivacionDesactivacionRepartidor";
+        return view ("activacionDesactivacionRepartidor", compact("page"));
+    }
+
+    public function activacionDesactivacionCliente(){
+        $page = "pageactivacionDesactivacionCliente";
+        return view ("activacionDesactivacionCliente", compact("page"));
+    }
 }
